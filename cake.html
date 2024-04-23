@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cake</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="logo of a cake"></a>
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bread.html">Bread</a></li>
+                <li><a href="cake.html" class="selected">Cake</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+            <button type="submit" class="search-button">Search</button>
+
+        </header>
+
+        <main id="main-content">
+        <section class ="container1">
+            <h1>Cake</h1>
+        </section>
+    
+        <section class="container2-bread">
+
+            <div class="group1">
+                <div class="image-container-bread">
+                    <img src="img/Vanilla Cupcakes.png" alt="Vanilla Cupcakes">
+                </div>
+               
+    
+                <div class="description">
+                    <h2>Vanilla Cupcakes</h2> 
+
+                    <div class="difficulty">
+                        <p>difficulty<p>
+                        <img src="img/difficulty-level-1.png" alt="difficulty level is one star">
+                    </div>  
+                </div>
+            </div>
+    
+            <div class="group2">
+                <div class="image-container">
+                    <img src="img/Red Velvet Cake.png" alt="Red Velvet Cake">
+                </div>
+    
+                <div class="description">
+                    <h2>Red Velvet Cake</h2> 
+    
+                    <div class="difficulty">
+                        <p>difficulty<p>
+                        <img src="img/difficulty-level-3.png" alt="difficulty level is three stars">
+                    </div>  
+                </div>
+        </div>
+    
+            <div class="group3">
+                <div class="image-container">
+                    <img src="img/Carrot Cake .png" alt="Carrot Cake">
+                </div>
+    
+                <div class="description">
+                    <h2>Carrot Cake</h2> 
+                    <div class="difficulty">
+                        <p>difficulty<p>
+                        <img src="img/difficulty-level-2.png" alt="difficulty level is one star">
+                    </div>  
+            </div>
+        </div>
+    
+            <div class="group4">
+                <div class="image-container">
+                    <img src="img/Lemon Drizzle Cake.png" alt="Lemon Drizzle Cake">
+                </div>
+    
+                <div class="description">
+                    <h2>Lemon Drizzle Cake</h2> 
+    
+                    <div class="difficulty">
+                        <p>difficulty<p>
+                        <img src="img/difficulty-level-1.png" alt="difficulty level is one star">
+                    </div>  
+            </div>
+            </div>
+            </section>  
+        </main>
+        <footer>
+            <div class="copyright">
+                <p>&copy; 2024 QY baking studio. All rights reserved.</p>
+            </div>
+        </footer>
+        <script>
+            function toggleMenu() {
+                var navLinks = document.getElementById("navLinks");
+                navLinks.classList.toggle("active");
+                var bars = document.querySelectorAll('.bar');
+                bars.forEach(bar => bar.classList.toggle('change'));
+            }
+        </script>
+</body>
+</html>

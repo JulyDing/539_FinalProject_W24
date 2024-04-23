@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <a href="index.html"><img src="img/logo.png"  alt="logo of a cake"></a>
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bread.html">Bread</a></li>
+                <li><a href="cake.html">Cake</a></li>
+                <li><a href="about.html" class="selected">About</a></li>
+            </ul>
+        </nav>
+
+        <button type="submit" class="search-button">Search</button>
+
+        </header>
+
+    <main id="main-content">
+    <section class ="container1">
+            <div class="title">
+            <h1>Qiyue Ding</h1>
+            <p>Full time student, Part time baker</p>
+    </section>
+    <section class="container2-about">
+            <div class="fav-bread">
+            <h2>My favorite bread is</h2>
+            <h3> Coconut Latte Toast</h3>
+            <img src="img/coconut latte toast.png" alt="Coconut Latte Toast">
+            </div>
+
+            <div class="fav-cake">
+            <h2>My favorite cake is </h2> 
+            <h3>Earl Grey Chiffon Cake</h3>
+            <img src="img/earl grey chiffon cake.png" alt="Earl Grey Chiffon Cake">
+            </div>
+
+            <div class="fav-flavor">
+            <h2>My favorite flavor is </h2> 
+            <h3>Lemon</h3>
+            <img src="img/lemon.png" alt="Lemon">
+            </div>
+            </div>
+    </section>
+    </main>
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2024 QY baking studio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+            var bars = document.querySelectorAll('.bar');
+            bars.forEach(bar => bar.classList.toggle('change'));
+        }
+    </script>
+    </main>
+</body>
+</html>

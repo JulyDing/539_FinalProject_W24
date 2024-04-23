@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagel-Ingredients</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <a href="index.html"><img src="img/logo.png"  alt="logo of a cake"></a>
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bread.html" class="selected">Bread</a></li>
+                <li><a href="cake.html">Cake</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+            <button type="submit" class="search-button">Search</button>
+
+        </header>
+<main id="main-content">
+    <section class ="container1-ingredients">
+        <div class="container1-h1">
+        <h1>Plain Bagel</h1>
+        </div>
+
+            <div>
+                <a href="bagel-ingredients.html">
+                <button class="ingredients-button1">Ingredients</button>
+                </a>
+            </div>
+
+            <div>
+                <a href="bagel-tutorial.html">
+                <button class="tutorial-button1">Tutorial</button>
+                </a>
+            </div>
+
+            </div>
+    </section>
+
+    <section class="container2-ingredients" id="checkboxContainer">
+       
+            <div class="toolchecklist-text">
+                <h2>Tool Checklist</h2>
+            </div>
+
+            <div class="toolchecklist-container">
+                <div>
+                    <input type="checkbox" id="oven-checkbox">
+                </div>
+                <div>
+                    <img src="img/Oven.png" alt="oven">
+                </div>
+                <div class="oven">
+                    <label for="oven-checkbox">Oven</label>
+                </div>
+            
+                <div>
+                    <input type="checkbox" id="pot-checkbox">
+                </div>
+                <div>
+                    <img src="img/Pot.png" alt="green pot">
+                </div>
+                <div class="pot">
+                    <label for="pot-checkbox">Pot</label>
+                </div>
+            </div>
+       
+
+            <div class="ingredients-checklist">
+                <div class="ingredientschecklist-text">
+                    <h2>Ingredient Checklist</h2>
+                </div>
+    
+                <div class="number-input">
+                    <label for="number">Servings:</label>
+                    <input type="number" id="number" value="6">
+                    <span id="text">bagels</span>
+                </div>
+    
+                <div class="mlButton">
+                    <button id="mlButton">ml</button>
+                </div>
+                <div class="gButton">
+                    <button id="gButton">g</button>
+                </div>
+            </div>
+    
+            <div class="ingredients-container">
+                <label for="warm-water-checkbox">
+                    <input type="checkbox" id="warm-water-checkbox">
+                    <div class="tohide">check</div>
+                </label>
+                    <div class="ingredients-name">
+                        Warm Water
+                    </div>
+        
+                <label class="amount" data-original-amount="250">250</label>
+                <label class="unit">ml</label>                
+    
+                <label for="sugar-checkbox">
+                    <input type="checkbox" id="sugar-checkbox">
+                        <div class="tohide">check</div>
+                </label>
+                    <div class="ingredients-name">
+                        Sugar
+                    </div> 
+                </label>
+                <label class="amount" data-original-amount="45" id="sugarAmount">45</label>
+                <label class="unit" id="sugarUnit">g</label>
+    
+                <label for="yeast-checkbox">
+                    <input type="checkbox" id="yeast-checkbox">
+                    <div class="tohide">check</div>
+                </label>
+                    <div class="ingredients-name">
+                        Instant Yeast
+                    </div>
+                </label>
+                <label class="amount" data-original-amount="6" id="yeastAmount">6</label>
+                <label class="unit" id="yeastUnit">g</label>
+    
+                <label for="flour-checkbox">
+                    <input type="checkbox" id="flour-checkbox">
+                    <div class="tohide">check</div>
+                </label>
+                    <div class="ingredients-name">
+                        All Purpose Flour
+                    </div> 
+                </label>
+                <label class="amount" id="flourAmount" data-original-amount="375">375</label>
+                <label class="unit" id="flourUnit">g</label>
+    
+                <label for="salt-checkbox">
+                    <input type="checkbox" id="salt-checkbox">
+                    <div class="tohide">check</div>
+                </label>
+                    <div class="ingredients-name">
+                        Salt
+                    </div>
+                </label>
+                <label class="amount" id="saltAmount" data-original-amount="5">5</label>
+                <label class="unit" id="saltUnit">g</label>
+            </div>
+        </section>
+    </section>
+</main>
+<footer>
+    <div class="copyright">
+        <p>&copy; 2024 QY baking studio. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const servingInput = document.getElementById('number');
+            const amountElements = document.querySelectorAll('.amount');
+    
+            servingInput.addEventListener('input', function() {
+                let servingSize = parseInt(this.value);
+    
+                if (isNaN(servingSize) || servingSize < 1) {
+                    servingSize = 0; 
+                }
+    
+                amountElements.forEach(function(element) {
+                    const originalAmount = parseInt(element.getAttribute('data-original-amount'));
+    
+                    if (isNaN(originalAmount)) {
+                        console.error("Invalid original amount");
+                        return; 
+                    }
+    
+                    const newAmount = Math.round(originalAmount * servingSize / 6);
+                    element.textContent = newAmount;
+                });
+            });
+        });
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mlButton = document.getElementById('mlButton');
+        const gButton = document.getElementById('gButton');
+        const sugarAmountLabel = document.getElementById('sugarAmount');
+        const sugarUnitLabel = document.getElementById('sugarUnit');
+        const servingInput = document.getElementById('number');
+
+        function updateSugar() {
+            const sugarGrams = parseInt(sugarAmountLabel.getAttribute('data-original-amount'));
+            const servingSize = parseInt(servingInput.value);
+            
+            const sugarMilliliters = sugarGrams / 0.85; 
+
+            if (sugarUnitLabel.textContent === 'ml') {
+          
+                const newSugarAmount = Math.round((sugarMilliliters * servingSize) / 6);
+                sugarAmountLabel.textContent = newSugarAmount;
+            } else {
+               
+                const newSugarAmount = Math.round((sugarGrams * servingSize) / 6);
+                sugarAmountLabel.textContent = newSugarAmount;
+            }
+        }
+
+  
+        mlButton.addEventListener('click', function() {
+           
+            sugarUnitLabel.textContent = 'ml';
+            updateSugar();
+        });
+
+    
+        gButton.addEventListener('click', function() {
+            
+            sugarUnitLabel.textContent = 'g';
+            updateSugar();
+        });
+
+        
+        servingInput.addEventListener('input', function() {
+            
+            updateSugar();
+        });
+        updateSugar();
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function areAllCheckboxesChecked() {
+            const ingredientsCheckboxes = document.querySelectorAll('.ingredients-container input[type="checkbox"]');
+            const toolCheckboxes = document.querySelectorAll('.toolchecklist-container input[type="checkbox"]');
+            
+            let allIngredientsChecked = true;
+            let allToolsChecked = true;
+
+            for (let checkbox of ingredientsCheckboxes) {
+                if (!checkbox.checked) {
+                    allIngredientsChecked = false;
+                    break;
+                }
+            }
+
+            for (let checkbox of toolCheckboxes) {
+                if (!checkbox.checked) {
+                    allToolsChecked = false;
+                    break;
+                }
+            }
+
+            return allIngredientsChecked && allToolsChecked;
+        }
+
+        function updateButtonColor() {
+            const tutorialButton = document.querySelector('.tutorial-button1');
+            if (areAllCheckboxesChecked()) {
+                tutorialButton.style.backgroundColor = '#B4CFBD';
+            } else {
+                tutorialButton.style.backgroundColor = ''; 
+            }
+        }
+
+        document.querySelectorAll('.ingredients-container input[type="checkbox"]').forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                updateButtonColor();
+            });
+        });
+
+        document.querySelectorAll('.toolchecklist-container input[type="checkbox"]').forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                updateButtonColor();
+            });
+        });
+
+        updateButtonColor();
+    });
+</script>
+<script>
+    function toggleMenu() {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+        var bars = document.querySelectorAll('.bar');
+        bars.forEach(bar => bar.classList.toggle('change'));
+    }
+</script>
+<script>
+    document.getElementById('mlButton').addEventListener('click', function() {
+        document.querySelectorAll('.unit').forEach(function(label) {
+            label.textContent = 'ml';
+            });
+    });
+</script>
+
+
+<script>
+    document.getElementById('gButton').addEventListener('click', function() {
+        document.querySelectorAll('.unit').forEach(function(label) {
+label.textContent = 'g';
+});
+});
+</script>
+
+</body>
+</html>

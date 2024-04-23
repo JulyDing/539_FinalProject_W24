@@ -1,0 +1,896 @@
+/* Font for all page; All View*/  
+h1,h2,h3,p{
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-family: 'comic sans ms', sans-serif, "Arial", "Helvetica";
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 400;
+}
+h2{
+    font-size: 24px;
+    font-weight: 300;
+}
+h3{
+    font-size: 16px;
+    font-weight: 200;
+}
+p{
+    font-size: 12px;
+    font-weight: 100;
+}
+li,a,button{
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-family: 'roboto', sans-serif, "Arial", "Helvetica";
+    font-size: 12px;
+}
+
+
+/* Nav bar mobile view hamberger menu */
+
+
+header {
+    background-color: #FFE5B4;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+header img {
+    width: auto;
+    height: 50px;
+}
+
+nav {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: 'comic sans ms', sans-serif, "Arial", "Helvetica";
+    font-size: 20px;
+    order:1;
+}
+
+nav ul {
+    list-style: none;
+    display: none; 
+}
+nav ul li a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #4a2b14;
+}
+nav ul li a:hover {
+    background-color: #FFE5B4; 
+    color: #da4860;
+    text-decoration: underline;
+    font-weight: bold;
+}
+nav ul li a.selected {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    background-color: #957761;
+    border-radius: 15px;
+    width: 120px;
+}
+.search-button{
+    padding: 8px 12px;
+    background-color: #FFF4DF;
+    border: 2px solid #B0C4DE;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    order:2;
+}
+
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    order:0;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.change .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.change .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-links.active {
+    display: block;
+}
+
+
+.nav-links.active li {
+    background-color: #cdbfb5;
+    border: 1px solid #795336;
+    border-radius: 15px;
+}
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+/* Container1 for all page; ALl View*/   
+.container1{
+    background-color: #FFF4DF;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    padding-top: 100px;
+}
+/* Index; Mobile View*/ 
+.container2-index{
+    background-color: #DCC7B6;
+}
+
+
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 250px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-box-front {
+    background-color: #FFF4DF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-box-back {
+    background-color: transparent;
+    transform: rotateY(180deg);
+}
+
+.flip-box-back img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+.index-button-difficulty{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    justify-content: center;
+    place-items: center;
+    padding: 0px 20px 20px 20px;
+}
+.level1{
+    grid-column: 1/2;
+    background-color: #dbe8e0;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    border:#4d4c4c 4px solid;
+}
+.level2{
+    grid-column: 2/3;
+    background-color:#bac9de;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+}
+.level3{
+    grid-column: 3/4;
+    background-color:#9db6d7;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+}
+.index-button{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    place-items: center;
+    padding: 0px 20px 20px 20px;
+}
+
+.vanilla{
+    grid-column: 1/2;
+    background-color: #FFF4DF;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+}
+.lemon{
+    grid-column: 2/3;
+    background-color: #FFE5B4;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+}
+.strawberry{
+    grid-column: 3/4;
+    background-color: #E999A7;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    border:#4d4c4c 4px solid;
+}
+
+/* Bread+Cake page; Images; Mobile View*/
+.container2-bread{
+    display: grid;
+    background-color: #DCC7B6;
+    padding: 30px;
+}
+.container2-bread h2{
+    font-size: 24px;
+    padding: 10px;
+
+}
+.group1{
+    background-color: #f8e2ba;
+    border-radius: 20px;
+    margin: 10px;
+    display: grid;
+}
+
+.group2{
+    background-color: #f8e2ba;
+    border-radius: 10px;
+    margin: 10px; 
+}
+.group3{
+    background-color: #f8e2ba;
+    border-radius: 10px;
+    margin: 10px;
+}
+.group4{
+    background-color: #f8e2ba;
+    border-radius: 10px;
+    margin: 10px;
+}
+.description{
+    border-radius: 10px;
+    background-color: #f8e2ba;
+}
+.difficulty{
+    background-color: #FFF4DF;
+    border-radius: 0px 0px 10px 10px;
+}
+.container2-bread a{
+    padding: 0px;
+}
+
+.container2-bread img{
+    width: 100%;
+    height: 200px;
+    margin: 0px;
+    padding:0px;
+    border-radius: 10px;
+}
+.difficulty img{
+    width: 30%;
+    height: 30%;
+}
+/* About page; Mobile View*/
+.container2-about{
+    background-color: #DCC7B6;
+    padding: 30px;
+}
+.container2-about img{
+    width: 100%;
+    height: 200px;
+}
+.container2-about h2{
+    font-size: 20px;
+    padding: 10px;
+    margin-top:10px;
+}
+.container2-about h3{
+    font-size: 16px;
+    padding: 10px;
+    background-color: bisque;
+}
+
+/* Ingredients Page; Mobile View*/
+.container1-ingredients{
+    background-color: #FFF4DF;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding-top: 100px;
+}
+.container1-h1{
+    grid-column: 1/3;
+    text-align: left;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.ingredients-button1{
+    grid-column: 3/4;
+    background-color: #BC9D85; 
+    border-radius: 20px;
+    border-color: #795336;
+    text-align: center;
+    width: 90px;
+    height: 50px;
+}
+.ingredients-button1:hover {
+    background-color: #795336;
+    color: white;
+}
+.tutorial-button1{
+    grid-column: 4/5;
+    border-radius: 20px;
+    background-color: #FFF4DF;
+    border:1px solid #000000;
+    text-align: center;
+    width: 90px;
+    height: 50px;
+}
+.tutorial-button1:hover {
+    background-color: #795336;
+    color: white;
+}
+.tutorial-button1.checked {
+    background-color: green;
+}
+.container2-ingredients{
+    background-color: #DCC7B6;
+    padding:20px;
+}
+.tool-checklist{
+    border-radius: 10px;
+    padding: 20px;
+}
+.ingredients-checklist{
+    border-radius: 10px;
+    padding: 20px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+.ingredientschecklist-text{
+    grid-column:1/5;
+    grid-row:1/2;
+    justify-content: center;
+    align-self: center;
+}
+.number-input
+{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    justify-content: center;
+    align-self: center;
+}
+.mlButton button, .gButton button{
+    width: 50px;
+    height: 30px;
+    background-color: #dbe8e0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right:10px;
+}
+.number-input input{
+    width: 50px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 10px
+}
+.toolchecklist-container
+{
+    background-color: #FFF9EC;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.toolchecklist-container input[type="checkbox"],.ingredients-container input[type="checkbox"] {
+    width: 50px;
+    height: 25px;
+    margin-right: 10px;
+    justify-self: center;
+    align-self: center;
+}
+.toolchecklist-container img{
+    width: 100px;
+    height: 100px;
+    justify-self: center;
+    align-self: center;
+}
+
+
+.ingredients-container{
+    background-color: #FFF4DF;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+.ingredients-name,.amount,.unit{
+    display: grid;
+    font-size: 16px;
+    justify-self: left;
+    align-self: center;
+}
+.tohide{
+    display: none;
+}
+.ingredients-name{
+    grid-column: 2/4;
+}
+.amount{
+    grid-column: 5/6;
+}
+.unit{
+    grid-column: 6/7;
+}
+
+/* Tutorial Page; Mobile View*/
+.container1-ingredients{
+    background-color: #FFF4DF;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding-top: 10px;
+}
+.container1-h1{
+    grid-column: 1/3;
+    text-align: left;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.ingredients-button2{
+        grid-column: 4/5;
+        border-radius: 20px;
+        background-color: #FFF4DF;
+        border:1px solid #000000;
+        text-align: center;
+        width: 90px;
+        height: 50px;
+}
+.tutorial-button2:hover,.ingredients-button2:hover {
+    background-color: #795336;
+    color: white;
+}
+.tutorial-button2{
+    grid-column: 3/4;
+    background-color: #BC9D85; 
+    border-radius: 20px;
+    border-color: #795336;
+    text-align: center;
+    width: 90px;
+    height: 50px;
+}
+.step1-button{
+    grid-column: 9/13;
+    text-align: center;
+}
+.container3-progressbar{
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr 1fr;
+}
+.container3-progressbar h2{
+    font-size: 16px;
+}
+.container3-progressbar h3{
+    font-size: 16px;
+}
+.dough-preparation,.dough-shaping,.boiling,.baking{
+    text-align: center;
+}
+.dough-preparation{
+    grid-column: 1/6;
+    grid-row: 1/2;
+    background-color: #d7efdb;
+    border: 1px solid #63a56e;
+}
+.dough-shaping{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    background-color: #d6e6f6;
+    border: 1px solid #75a0cb;
+}
+.boiling{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    background-color: #f7f3d4;
+    border: 1px solid #b3a856;
+}
+.baking{
+    grid-column: 5/6;
+    grid-row: 2/3;
+    background-color: #fce2e9;
+    border: 1px solid #c57389;
+}
+.container2-tutorial{
+    background-color: antiquewhite;
+    padding:80px 10px 200px 10px;
+}
+
+.container2-tutorial img{
+    padding: 20px;
+    width: 70%;
+    height: auto;
+}
+.previous-button{
+    position: absolute; 
+    bottom: 10px; 
+    left: 80px;
+    transform: translateY(-50%);
+    background-color: #fff8f5;
+    border: #795336 1px solid;
+    border-radius: 10px;
+    padding:10px;
+    width: 80px;
+}
+.previous-button:hover{
+    background-color: #4a2b14;
+    color: white;
+}
+.next-button{
+    position: absolute;
+    bottom: 10px; 
+    right: 80px; 
+    transform: translateY(-50%);
+    background-color: #fff8f5;
+    border: #795336 1px solid;
+    border-radius: 10px;
+    padding:10px;
+    width: 80px;
+}
+.next-button:hover{
+    background-color: #4a2b14;
+    color: white;
+}
+/*Footer*/
+.copyright{
+    background-color: #FFE5B4;
+    padding: 5px;
+    text-align: center;
+    font-family: 'comic sans ms', sans-serif, "Arial", "Helvetica";
+    font-size: 12px;
+}
+
+
+@media screen and (min-width: 768px){
+    /*Tablet View*/
+    /*general font*/
+
+    h1{
+        font-size: 42px;
+        font-weight: 400;
+    }
+    h2{
+        font-size: 32px;
+        font-weight: 300;
+    }
+    h3{
+        font-size: 24px;
+        font-weight: 200;
+    }
+    p{
+        font-size: 16px;
+        font-weight: 100;
+    }
+    li,a,button{
+        color: black;
+        text-align: center;
+        padding: 10px;
+        font-family: 'roboto', sans-serif, "Arial", "Helvetica";
+        font-size: 12px;
+    }
+    
+    /*Nav bar for all page; Tablet View*/
+    header {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+    .search-button{
+        padding: 8px 12px;
+        background-color: #FFF4DF;
+        border: 2px solid #B0C4DE;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100px;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    /* Index page; Container2; Tablet++*/
+.container2-index{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    background-color: #DCC7B6;
+}
+.image-container-index{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    justify-content: center;
+    align-self: center;
+    margin:150px 0px 150px 0px;
+}
+.container2-index-text{
+    grid-column: 2/3;
+    align-self: center;
+    justify-content: center;
+}
+.container2-index-text h2{
+    font-size: 30px;
+}
+.container2-index-text p{
+    font-size: 24px;
+}
+
+/* Bread+Cake page; Images; Tablet View*/
+.container2-bread{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    background-color: #DCC7B6;
+    padding:10px;
+}
+/* About page; Tablet View*/
+.container2-about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+.fav-bread{
+    grid-column: 1/2;
+}
+.fav-cake{
+    grid-column: 2/3;
+}
+.fav-flavor{
+    grid-column: 1/2;
+}
+/* Ingredients Page; Tablet View++*/
+
+.container2-ingredients{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+.tool-checklist{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0px;
+}
+.ingredients-checklist{
+    grid-column: 2/5;
+    grid-row: 1/2;
+    padding: 0px;
+    row-gap: 10px;
+}   
+.ingredients-container{
+    grid-column:2/5;
+    grid-row: 2/5;
+    padding: 0px;
+    justify-content: top;
+    place-items: center;
+}
+ 
+.toolchecklist-container label{
+    justify-content: center;
+    align-content: center;
+}
+.toolchecklist-container{
+    grid-column: 1/2;
+    grid-row: 2/5;
+    margin: 0px;
+    place-items: center;
+}
+/* Tutorial Page; Tablet View++*/
+.container3-progressbar{
+    height: 45px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+}
+.dough-preparation{
+    grid-column: 1/6;
+    background-color: #d7efdb;
+    border: 1px solid #63a56e;
+}
+.dough-shaping{
+    grid-column: 6/9;
+    grid-row: 1/2;
+    background-color: #d6e6f6;
+    border: 1px solid #75a0cb;
+}
+.boiling{
+    grid-column: 9/10;
+    grid-row: 1/2;
+    background-color: #f7f3d4;
+    border: 1px solid #b3a856;
+}
+.baking{
+    grid-column: 10/11;
+    grid-row: 1/2;
+    background-color: #fce2e9;
+    border: 1px solid #c57389;
+}
+.container2-tutorial{
+    background-color: antiquewhite;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.container2-tutorial img{
+    padding: 20px;
+    width: 70%;
+    height: auto;
+}
+.previous-button{
+    position: absolute; 
+    bottom: 150px;
+    left: 30px;
+}
+.previous-button:hover{
+    background-color: #4a2b14;
+    color: white;
+}
+.next-button{
+    position: absolute;
+    bottom: 150px;
+    right: 30px;
+}
+.next-button:hover{
+    background-color: #4a2b14;
+    color: white;
+}
+}
+
+@media screen and (min-width: 1024px){
+    header {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex; 
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: none; 
+    }
+/* Hearder/Navigation for all page; Desktop View*/
+.search-button{
+    padding: 8px 12px;
+    background-color: #FFF4DF;
+    border: 2px solid #B0C4DE;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+}
+.menu-toggle {
+    display: none;
+}
+.nav-links {
+    display: flex;
+}
+
+
+/* Bread+Cake page; Images; Desktop View*/
+.container2-bread{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    background-color: #DCC7B6;
+    padding: 30px 10px 200px 10px;
+}
+
+/* About page; Tablet View*/
+.container2-about{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 80px;
+    padding:50px 50px 200px 50px;
+
+}
+.fav-bread{
+    grid-column: 1/2;
+}
+.fav-cake{
+    grid-column: 2/3;
+}
+.fav-flavor{
+    grid-column: 3/4;
+}
+
+}

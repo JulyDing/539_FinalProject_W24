@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="logo of a cake"></a>
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="selected">Home</a></li>
+                <li><a href="bread.html">Bread</a></li>
+                <li><a href="cake.html">Cake</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+            <button type="submit" class="search-button">Search</button>
+        </header>
+    
+    <main id="main-content">
+    <section class ="container1">
+        <h1>QY Baking Studio</h1>
+        <p>All about bread and cakes</p>
+    </section>
+
+    <section class="container2-index">
+    <div class="container2-index-text">
+        <h2> Today's <br> Baking Inspiration</h2>
+        </div>
+
+        <div class="image-container-index" onclick="flipImage()">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <p>Click to reveal</p>
+                    </div>
+                    <div class="flip-box-back">
+                        <img src="img/cake.png" alt="cake">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div>
+        <p>Difficulty Level</p>
+        <div class="index-button-difficulty">
+            <button class="level1">Easy</button>
+            <button class="level2">Medium</button>
+            <button class="level3">Hard</button>
+        </div>
+
+        
+
+        <div>
+        <p>Flavor</p>
+        <div class="index-button">
+            <button class="vanilla">vanilla</button>
+            <button class="lemon">Lemon</button>
+            <button class="strawberry">strawberry</button>
+        </div>
+    </div>
+    </div>
+    </section>
+</main>
+<footer>
+    <div class="copyright">
+        <p>&copy; 2024 QY baking studio. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+            var bars = document.querySelectorAll('.bar');
+            bars.forEach(bar => bar.classList.toggle('change'));
+        }
+    </script>
+        <script>
+            function flipImage() {
+                var flipBoxInner = document.querySelector('.flip-box-inner');
+                flipBoxInner.style.transform = 'rotateY(180deg)';
+            }
+        </script>
+</body>
+</html>
